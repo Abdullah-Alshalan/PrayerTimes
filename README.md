@@ -1,2 +1,0 @@
-# PrayerTimes
-Java Android project
