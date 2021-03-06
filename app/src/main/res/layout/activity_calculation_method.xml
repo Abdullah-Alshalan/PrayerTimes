@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".activities.CalculationMethodActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewCalculationMethodTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/CalculationMethod"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <View
+                    android:id="@+id/divider0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupCalcMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonIthnaAshari"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Ithna_Ashari"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonKerachi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/UIS" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonISNA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ISNA" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMWL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/MWL" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMakkah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Umm_al_Qura" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonEgyptian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EGAS" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonTehran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/IGUT" />
+                </RadioGroup>
+
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/textViewAsrAdjustmentTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Asr_Adjustment"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAsrAdjust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonShafii"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Shafii" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonHanafi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Hanafi" />
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+
+                <TextView
+                    android:id="@+id/textViewHLATitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/higher_latitudes_adjustment"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupHigherLatAdjust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/No_adjustment" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMidlde"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/middle_of_night" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonOne7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seventh_of_night" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton60th"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/angle_60th_of_night" />
+                </RadioGroup>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

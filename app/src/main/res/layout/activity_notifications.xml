@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NotificationsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/switchNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Notifications" />
+
+                    <TextView
+                        android:id="@+id/textViewNotificationsEnable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/NotificationsEnable" />
+
+                    <View
+                        android:id="@+id/divider0"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fajr"
+                        android:textColor="?android:attr/textColorPrimary" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/editTextNumberFajrBefore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsFajrBefore"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <EditText
+                    android:id="@+id/editTextNumberFajrAfter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsFajrAfter"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dhohr"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDhohrBefore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsDhohrBefore"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <EditText
+                    android:id="@+id/editTextNumberDhohrAfter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsDhohrAfter"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asr"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/editTextNumberAsrBefore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsAsrBefore"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <EditText
+                    android:id="@+id/editTextNumberAsrAfter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsAsrAfter"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maghreb"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/editTextNumberMaghrebBefore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsMaghrebBefore"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <EditText
+                    android:id="@+id/editTextNumberMaghrebAfter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsMaghrebAfter"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/isha"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <EditText
+                    android:id="@+id/editTextNumberIshaBefore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsIshaBefore"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <EditText
+                    android:id="@+id/editTextNumberIshaAfter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/NotificationsIshaAfter"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
